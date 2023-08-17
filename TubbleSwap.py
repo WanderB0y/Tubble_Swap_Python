@@ -23,15 +23,17 @@ while flow:
         new_fullname = "\n" + "Fullname :: " + first_name.title() + " " + last_name.title() + "\n"
 
         #Printing it again
-
         print("\nYour fullname has been change")
         print(new_fullname)
+
         #Controlling the loop using boolean
         flow = False
 
     elif var_swap == 'N':
         print("\nYour fullname remains unchange")
         print(first_fullname)
+
+        #Controlling the loop using boolean
         flow = False
     else:
         print("\nYour input is incorrect please try again\n")
