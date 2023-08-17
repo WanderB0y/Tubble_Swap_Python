@@ -1,25 +1,42 @@
 first_name = input("Enter your first name :: ")
-last_name = input("Enter your last naame :: ")
+last_name = input("Enter your last name :: ")
 
-fullname = "Fullname :: " + first_name.title() + " " + last_name.title()
+first_fullname = "\n" + "Fullname :: " + first_name.title() + " " + last_name.title() + "\n"
 
-print(fullname)
+print(first_fullname)
 
+
+#Controlling thee loop using boolean
 flow = True
 
 while flow:
 
-    print("Y - Yes")
-    print("N - No")
-    var_swap = input("Would you want to swap it :: ")
+    print("Would you want your first name and last name to change position\n")
+    print("Press Y - Yes")
+    print("Press N - No\n")
+    var_swap = input("Enter Your Choice :: ")
 
     if var_swap == 'Y':
+
+        #Changing the value of two variables without using temporary variable
         first_name, last_name = last_name, first_name
-        print("Your fullname has been change")
-        print(fullname)
+        new_fullname = "\n" + "Fullname :: " + first_name.title() + " " + last_name.title() + "\n"
+
+        #Printing it again
+
+        print("\nYour fullname has been change")
+        print(new_fullname)
+        #Controlling the loop using boolean
         flow = False
+
     elif var_swap == 'N':
-        print("Your fullname has not been change")
+        print("\nYour fullname remains unchange")
+        print(first_fullname)
+        flow = False
+    else:
+        print("\nYour input is incorrect please try again\n")
+
+print("Thank you " + first_name + " for using our program")
         
 
 
